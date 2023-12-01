@@ -1,0 +1,61 @@
+{
+  "name": "03-api-solid",
+  "version": "1.0.0",
+  "description": "API Node.js com SOLID",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18 <19"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "lint": "eslint --fix src --ext .ts",
+    "build": "tsup src --clean --out-dir build",
+    "postbuild": "rimraf -g build/**/*.spec.js",
+    "test": "vitest run --dir src/use-cases",
+    "test:watch": "vitest --dir src/use-cases",
+    "test:create-prisma-environment": "npm link ./prisma/vitest-environment-prisma",
+    "test:install-prisma-environment": "npm link vitest-environment-prisma",
+    "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment",
+    "test:e2e": "vitest run --dir src/http",
+    "test:e2e:watch": "vitest --dir src/http",
+    "test:coverage": "vitest run --dir src --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [
+    "gym",
+    "check-in",
+    "solid",
+    "vitest"
+  ],
+  "author": "Leonardo do Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cookie": "9.2.0",
+    "@fastify/jwt": "7.2.0",
+    "@prisma/client": "5.6.0",
+    "bcryptjs": "2.4.3",
+    "dayjs": "1.11.10",
+    "dotenv": "16.3.1",
+    "fastify": "4.21.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "2.1.0",
+    "@types/bcryptjs": "2.4.2",
+    "@types/node": "20.5.1",
+    "@types/supertest": "2.0.16",
+    "@vitest/coverage-v8": "0.34.3",
+    "@vitest/ui": "0.34.3",
+    "eslint": "8.47.0",
+    "npm-run-all": "4.1.5",
+    "prisma": "5.6.0",
+    "rimraf": "5.0.5",
+    "supertest": "6.3.3",
+    "tsup": "7.2.0",
+    "tsx": "3.12.7",
+    "typescript": "5.1.6",
+    "vite-tsconfig-paths": "4.2.0",
+    "vitest": "0.34.6"
+  }
+}

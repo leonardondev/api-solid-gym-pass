@@ -1,0 +1,9 @@
+{
+  "name": "vitest-environment-prisma",
+  "version": "0.0.1",
+  "description": "custom environment for vitest",
+  "main": "prisma-test-environment.ts",
+  "keywords": ["vitest", "environment"],
+  "author": "Leonardo do Nascimento",
+  "license": "MIT"
+}

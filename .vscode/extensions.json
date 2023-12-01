@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "dotenv.dotenv-vscode",
+    "usernamehw.errorlens",
+    "mhutchie.git-graph",
+    "nuxt.mdc",
+    "me-dutour-mathieu.vscode-github-actions"
+  ]
+}
